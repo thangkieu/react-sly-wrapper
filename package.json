@@ -1,0 +1,24 @@
+{
+  "name": "react-sly",
+  "version": "1.0.0",
+  "description": "React Wrapper component for Sly",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "sly",
+    "react-sly"
+  ],
+  "author": "Thang Kieu",
+  "license": "ISC",
+  "devDependencies": {
+    "create-react-class": "^15.6.0",
+    "object-assign": "^4.1.1",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1"
+  },
+  "dependencies": {
+    "sly": "https://github.com/darsain/sly"
+  }
+}
