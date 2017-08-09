@@ -19,6 +19,7 @@
     "react": "^15.6.1"
   },
   "dependencies": {
+    "jquery": "^3.2.1",
     "sly": "https://github.com/darsain/sly"
   }
 }
