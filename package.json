@@ -1,8 +1,12 @@
 {
-  "name": "react-sly",
+  "name": "react-sly-wrapper",
   "version": "1.0.0",
   "description": "React Wrapper component for Sly",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thangkieu/react-sly-wrapper"
+  },
   "scripts": {
     "dev": "webpack -d --watch --color --config webpack.config.babel.js",
     "test": "test"
