@@ -1,50 +1,36 @@
-var React = require('react');
-var CreateReactClass = require('create-react-class');
-var PropTypes = require('prop-types');
-var assign = require('object-assign');
-var options = require('./options');
+import React from 'react';
+import PropTypes from 'prop-types';
 
-require('jquery');
-require('sly/dist/sly.js');
+import DEFAULT_OPTIONS from './options';
+import 'jquery';
+import 'sly/dist/sly';
 
-var ITEMS_PER_ROW = 5;
+const ITEMS_PER_ROW = 5;
 
-var _extends =
-  Object.assign ||
-  function(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-    return target;
-  };
+class ReactSly extends React.PureComponent {
+  constructor(p) {
+    super(p);
 
-var ReactSly = CreateReactClass({
-  displayName: 'ReactSly',
-  propTypes: {},
-  statics: {},
-  handleClick: function handleClick() {},
-
-  componentDidMount: function() {
+    // instance of sly
+    this.frame = null;
+    this.sly = null; // ref of root el
+  }
+  componentDidMount() {
     if (!this.frame) {
       options.prevPage = this.sly.querySelector('.sly-button-prev');
       options.nextPage = this.sly.querySelector('.sly-button-next');
-      var containerWidth = this.sly.offsetWidth;
-      var itemsPerRow = this.props.itemsPerRow || ITEMS_PER_ROW;
+      const containerWidth = this.sly.offsetWidth;
 
-      var itemEls = this.sly.querySelectorAll('.slidee > li');
-      Array.prototype.forEach.call(itemEls, function(el) {
-        el.style.width = containerWidth / itemsPerRow + 'px';
+      const itemEls = this.sly.querySelectorAll('.slidee > li');
+      Array.prototype.forEach.call(itemEls, el => {
+        el.style.width = containerWidth / this.props.itemsPerRow + 'px';
       });
 
       this.frame = new Sly(
         this.sly,
-        _extends(options, this.props.options)
+        Object.assign(options, this.props.options)
       ).init();
+
       if (this.props.onInit) {
         this.props.onInit(this.frame);
       }
@@ -52,23 +38,30 @@ var ReactSly = CreateReactClass({
       this.frame.reload();
     }
     window.addEventListener('resize', this.resizeHandler, true);
-  },
+  }
 
-  componentWillUnmount: function() {
+  componentWillUnmount() {
     this.frame.destroy();
 
     window.removeEventListener('resize', this.resizeHandler);
-  },
+  }
 
-  render: function() {
-    var self = this;
-
+  render() {
     return React.cloneElement(this.props.children, {
-      ref: function(el) {
-        self.sly = el;
+      ref: el => {
+        this.sly = el;
       }
     });
   }
-});
+}
 
-module.exports = ReactSly;
+ReactSly.propTypes = {
+  onInit: PropTypes.func,
+  itemsPerRow: PropTypes.number
+};
+
+ReactSly.defaultProps = {
+  itemsPerRow: ITEMS_PER_ROW
+}
+
+export default ReactSly;
