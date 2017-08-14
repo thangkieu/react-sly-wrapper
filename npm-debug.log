@@ -1,0 +1,125 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/des00079/.nvm/versions/node/v6.7.0/bin/node',
+1 verbose cli   '/Users/des00079/.nvm/versions/node/v6.7.0/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.3
+3 info using node@v6.7.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/des00079/react-sly-wrapper',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/des00079/.npm/react-sly-wrapper/1.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/des00079/.npm correctMkdir not in flight; initializing
+10 info lifecycle react-sly-wrapper@1.0.0~prepublish: react-sly-wrapper@1.0.0
+11 silly lifecycle react-sly-wrapper@1.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/des00079/.npm/react-sly-wrapper/1.0.0/package.tgz',
+12 verbose tar pack   '/Users/des00079/react-sly-wrapper' ]
+13 verbose tarball /Users/des00079/.npm/react-sly-wrapper/1.0.0/package.tgz
+14 verbose folder /Users/des00079/react-sly-wrapper
+15 verbose addLocalTarball adding from inside cache /Users/des00079/.npm/react-sly-wrapper/1.0.0/package.tgz
+16 verbose correctMkdir /Users/des00079/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd react-sly-wrapper@1.0.0
+18 verbose afterAdd /Users/des00079/.npm/react-sly-wrapper/1.0.0/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/des00079/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/des00079/.npm/react-sly-wrapper/1.0.0/package/package.json written
+21 silly publish { name: 'react-sly-wrapper',
+21 silly publish   version: '1.0.0',
+21 silly publish   description: 'React Wrapper component for Sly',
+21 silly publish   main: 'dist/index.js',
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/thangkieu/react-sly-wrapper.git' },
+21 silly publish   scripts:
+21 silly publish    { dev: 'webpack -d --watch --color --config webpack.config.babel.js',
+21 silly publish      build: 'webpack --color --config webpack.config.production.babel.js',
+21 silly publish      test: 'test' },
+21 silly publish   keywords: [ 'sly', 'react-sly' ],
+21 silly publish   author: { name: 'Thang Kieu' },
+21 silly publish   license: 'ISC',
+21 silly publish   devDependencies:
+21 silly publish    { 'babel-preset-es2015': '^6.24.1',
+21 silly publish      'babel-preset-react': '^6.24.1',
+21 silly publish      'create-react-class': '^15.6.0',
+21 silly publish      'object-assign': '^4.1.1',
+21 silly publish      'prop-types': '^15.5.10',
+21 silly publish      react: '^15.6.1',
+21 silly publish      'babel-loader': '^7.1.1',
+21 silly publish      'babel-register': '^6.24.1',
+21 silly publish      webpack: '^3.5.1' },
+21 silly publish   dependencies:
+21 silly publish    { jquery: '^3.2.1',
+21 silly publish      sly: 'git+https://github.com/darsain/sly.git' },
+21 silly publish   readme: '# React Sly Wrapper #\n\nReact Wrapper Component for [Sly](http://darsa.in/sly/)\n\n## How to use\n\n#### Initialize\n```javascript\nimport ReactSlyWrapper from \'react-sly-wrapper\'\n\n<ReactSlyWrapper>\n    <div className="frame">\n        <ul className="slidee">\n            <li>Slide Item 1</li>  \n            <li>Slide Item 2</li>  \n            <li>Slide Item 3</li>  \n        </ul>\n    </div>\n</ReactSlyWrapper>\n```\n\n#### Sly `configurations`\n```javascript\n// Default options\nconst options = {\n\thorizontal: 1,\n\t  itemNav: \'basic\',\n  \tspeed: 300,\n\tmouseDragging: 1,\n  \ttouchDragging: 1,\n  \tsmart: 1\n};\n\n<ReactSlyWrapper options={options} />\n```\n\n##### Note\nThe document is still updating, please visit [Sly Document page](https://github.com/darsain/sly/tree/master/docs) for more information about `Sly.js`',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: 'cce4cff8f99f9ac19a70d39f84c57c6a1e2f0dcc',
+21 silly publish   bugs: { url: 'https://github.com/thangkieu/react-sly-wrapper/issues' },
+21 silly publish   homepage: 'https://github.com/thangkieu/react-sly-wrapper#readme',
+21 silly publish   _id: 'react-sly-wrapper@1.0.0',
+21 silly publish   _shasum: '8618112565e023e2444475bec738adc2a66a9c8d',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name react-sly-wrapper
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'react-sly-wrapper',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'react-sly-wrapper',
+26 silly mapToRegistry   name: 'react-sly-wrapper',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/react-sly-wrapper
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/des00079/.npm/react-sly-wrapper/1.0.0/package.tgz
+30 verbose request uri https://registry.npmjs.org/react-sly-wrapper
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 11:13:38 AM
+33 verbose request using bearer token for auth
+34 verbose request id 7135de8f7b21337b
+35 http request PUT https://registry.npmjs.org/react-sly-wrapper
+36 http 403 https://registry.npmjs.org/react-sly-wrapper
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Mon, 14 Aug 2017 04:13:39 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-sin18022-SIN',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1502684019.161306,VS0,VE831',
+37 verbose headers   vary: 'Accept-Encoding, Accept' }
+38 verbose request invalidating /Users/des00079/.npm/registry.npmjs.org/react-sly-wrapper on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : react-sly-wrapper
+40 verbose stack     at makeError (/Users/des00079/.nvm/versions/node/v6.7.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/Users/des00079/.nvm/versions/node/v6.7.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+40 verbose stack     at Request._callback (/Users/des00079/.nvm/versions/node/v6.7.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+40 verbose stack     at Request.self.callback (/Users/des00079/.nvm/versions/node/v6.7.0/lib/node_modules/npm/node_modules/request/request.js:200:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/Users/des00079/.nvm/versions/node/v6.7.0/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+40 verbose stack     at emitOne (events.js:101:20)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/Users/des00079/.nvm/versions/node/v6.7.0/lib/node_modules/npm/node_modules/request/request.js:988:12)
+41 verbose statusCode 403
+42 verbose pkgid react-sly-wrapper
+43 verbose cwd /Users/des00079/react-sly-wrapper
+44 error Darwin 15.6.0
+45 error argv "/Users/des00079/.nvm/versions/node/v6.7.0/bin/node" "/Users/des00079/.nvm/versions/node/v6.7.0/bin/npm" "publish"
+46 error node v6.7.0
+47 error npm  v3.10.3
+48 error code E403
+49 error "You cannot publish over the previously published version 1.0.0." : react-sly-wrapper
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
