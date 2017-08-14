@@ -1,4 +1,7 @@
+import webpack from 'webpack';
+
 export default {
+  devtool: 'source-map',
   entry: {
     index: './index.js',
   },
@@ -8,7 +11,8 @@ export default {
   module: {
     rules: [
       {
-        test: '/.js$/',
+        test: /\.js?$/,
+        exclude: /node_modules/,
         loader: 'babel-loader'
       }
     ]

@@ -1,29 +1,38 @@
-# README #
+# React Sly Wrapper #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+React Wrapper Component for [Sly](http://darsa.in/sly/)
 
-### What is this repository for? ###
+## How to use
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+#### Initialize
+```javascript
+import ReactSlyWrapper from 'react-sly-wrapper'
 
-### How do I get set up? ###
+<ReactSlyWrapper>
+    <div className="frame">
+        <ul className="slidee">
+            <li>Slide Item 1</li>  
+            <li>Slide Item 2</li>  
+            <li>Slide Item 3</li>  
+        </ul>
+    </div>
+</ReactSlyWrapper>
+```
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+#### Sly `configurations`
+```javascript
+// Default options
+const options = {
+	horizontal: 1,
+	  itemNav: 'basic',
+  	speed: 300,
+	mouseDragging: 1,
+  	touchDragging: 1,
+  	smart: 1
+};
 
-### Contribution guidelines ###
+<ReactSlyWrapper options={options} />
+```
 
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+##### Note
+The document is still updating, please visit [Sly Document page](https://github.com/darsain/sly/tree/master/docs) for more information about `Sly.js`

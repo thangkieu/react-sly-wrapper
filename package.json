@@ -9,6 +9,7 @@
   },
   "scripts": {
     "dev": "webpack -d --watch --color --config webpack.config.babel.js",
+    "build": "webpack --color --config webpack.config.production.babel.js",
     "test": "test"
   },
   "keywords": [
